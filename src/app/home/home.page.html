@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Envio de Imagens
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button size="full" color="success">
+    <input type="file" (change)="uploadFile($event.target.files)" />
+  </ion-button>
+  <ion-list>
+    <ion-item-group *ngFor="let img of lista_imagens">
+      <ion-item>{{img.nome}}</ion-item>
+      <ion-item><img src="{{img.url}}"></ion-item>
+    </ion-item-group>
+  </ion-list>
+</ion-content>
